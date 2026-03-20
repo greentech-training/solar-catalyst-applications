@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "Building an international harmonised\n approach to training green skills",
+    "description": "This initiative seeks to cultivate an international community of qualified technicians to power the energy transition. As a new approach to training, it focuses on ",
+    "description2": " empowerment, energy autonomy and professional integration."
+  },
+  "missionCards": [
+    {
+      "title": "Global Benchmark",
+      "description": "This European qualification provides a globally adaptable, high-quality framework for essential\n solar technical skills.",
+      "delay": "0ms"
+    },
+    {
+      "title": "Empowerment",
+      "description": "Providing accessible pathways to green careers, fostering social integration and\n economic independence.",
+      "delay": "100ms"
+    },
+    {
+      "title": "Excellence",
+      "description": "Developing EU-wide harmonised training in partnership with leading organizations to ensure the highest quality training.",
+      "delay": "200ms"
+    }
+  ],
+  "lebanonPilot": {
+    "title": "A Proven Model: From MENA to EU",
+    "description": "The curriculum's framework was first applied internationally in Lebanon, supported by InnoEnergy and the International Organisation for Migration (IOM). With funding provided by Germany's Federal Ministry for Economic Affairs and Energy, the training program is now launching in Germany to meet the critical demands of the European energy transition.",
+    "stats": [
+      {
+        "value": 215,
+        "suffix": " GW",
+        "label": "Germany's 2030 Solar Target",
+        "delay": "0ms"
+      },
+      {
+        "value": 86,
+        "suffix": "%",
+        "label": "Share of Jobs in Installation",
+        "delay": "100ms"
+      },
+      {
+        "value": 916000,
+        "suffix": "",
+        "label": "Projected EU Solar Jobs by 2029",
+        "delay": "200ms"
+      }
+    ]
+  },
+  "germanPilot": {
+    "title": "The German Pilot ",
+    "titleHighlight": "(Solar Catalyst)",
+    "description": "The pilot programs set to occur in Berlin and Bremerhaven have been crafted with local partners to best facilitate the unprecedented regional job growth projected for the solar sector.",
+    "quote": "71% of CEOs already cite skills shortages as their most significant business challenge.",
+    "quote2": "We're dedicated to supporting green innovations of the future and ensuring ",
+    "quote3": "there is a trained workforce to achieve climate goals.",
+    "attribution": "— Oana Penu",
+    "attribution2": "InnoEnergy Skills Institute"
+  },
+  "partnersSection": {
+    "title": "Project Facilitators",
+    "subtitle": "Working together to create the future of green energy training"
+  },
+  "partners": [
+    {
+      "title": "InnoEnergy",
+      "description": "Co-developing the curriculum and \nEU-wide accreditation, bringing decades of experience in sustainable education.",
+      "delay": "0ms"
+    },
+    {
+      "title": "WERK",
+      "description": "Local community partner in Bremerhaven, hosting the practical training at their central facility.",
+      "delay": "100ms"
+    },
+    {
+      "title": "IOM",
+      "description": "International initator of the successful Lebanon pilot, providing expertise in integration and empowerment program.",
+      "delay": "200ms"
+    },
+    {
+      "title": "greentech.training",
+      "description": "A specialized training initiative bridging the skills gap by recruiting and preparing international talent for Germany's renewable energy sector through expert-led and practical education.",
+      "delay": "300ms"
+    },
+    {
+      "title": "Projektmarkthalle Stadtteilzentrum Prenzlauerberg Ost",
+      "description": "A vibrant community hub and 'KulturMarktHalle' that fosters social integration and neighborhood development, serving as the central location for community-embedded project activities in Berlin.",
+      "delay": "400ms"
+    },
+    {
+      "title": "ehb elektro GmbH",
+      "description": "An established Berlin master electrician and solar specialist (Meisterbetrieb) acting as the technical industry partner for practical installation training and quality assurance.",
+      "delay": "500ms"
+    }
+  ]
+}

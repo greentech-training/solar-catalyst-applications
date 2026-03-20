@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Hire Germany's Next Generation",
+    "subtitle": "of Solar Technicians",
+    "description": "Our graduates are trained to a new EU-wide standard of excellence. They complete a rigorous program of online theory and hands-on practical installation, making them job-ready from day one."
+  },
+  "benefitsSection": {
+    "title": "Benefits for SME Installation Companies"
+  },
+  "benefits": [
+    "Access to pre-screened, certified\n talent ready to work",
+    "Technicians trained in the latest EU-wide standards and safety protocols",
+    "Reduce your internal training costs and time-to-hire significantly",
+    "Graduates with both theoretical knowledge and hands-on practical experience",
+    "Support the energy transition while building your\n skilled workforce",
+    "Partnership opportunities for curriculum input and early recruitment access"
+  ],
+  "whatYouGetSection": {
+    "title": "What Our Graduates Bring to Your Team"
+  },
+  "cta": {
+    "title": "Partner With Us",
+    "description": "Join our network of hiring partners and get early access to our certified graduates. Download our program brochure or contact us to learn more about partnership opportunities.",
+    "downloadButtonText": "Download Program Brochure",
+    "contactButtonText": "Contact Us",
+    "contactNote": "For partnership inquiries, please contact us at:"
+  }
+}

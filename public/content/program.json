@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "From Theory to Installation:",
+    "subtitle": "A Complete Solar Education",
+    "description": "This is not just a course; it's a career path. Our \"blended learning\" model combines flexible online modules with essential, hands-on workshop training. You will learn the 'why' and the 'how' of solar energy."
+  },
+  "keyInfoBoxes": [
+    {
+      "title": "Cost",
+      "value": "100% Free",
+      "subtitle": "(Pilot Program)",
+      "delay": "0ms"
+    },  
+    {
+      "title": "Location",
+      "value": "Bremerhaven",
+      "subtitle": "(at WERK facilities)",
+      "delay": "100ms"
+    },
+    {
+      "title": "Accreditation",
+      "value": "EU-wide \nHarmonised Training",
+      "subtitle": "(via InnoEnergy's European Solar Academy)",
+      "delay": "200ms"
+    },
+    {
+      "title": "Eligibility",
+      "value": "Open to All",
+      "subtitle": "(18+ years with CEF-B1 German)",
+      "delay": "300ms"
+    }
+  ],
+  "curriculum": {
+    "title": "Course Curriculum",
+    "description": "The program combines structured theoretical knowledge with essential hands-on practical training. You'll master both the science and real-world application of solar energy systems.",
+    "theoreticalTitle": "Theoretical Modules",
+    "practicalTitle": "Practical Modules"
+  },
+  "theoreticalModules": [
+    {
+      "title": "Theoretical 1: Fundamentals of Solar PV Technology",
+      "description": "Understanding PV principles, system components, panel types, and new EU Eco-design rules covering product efficiency and also durability.",
+      "icon": "Zap"
+    },
+    {
+      "title": "Theoretical 2: PV System Types & Energy Storage",
+      "description": "Detailing On-Grid, Off-Grid, and Hybrid systems, including battery technology and safe electrical integration.",
+      "icon": "Battery"
+    },
+    {
+      "title": "Theoretical 3: Site Assessment & System Design",
+      "description": "Analyzing roof angles and shading to optimize system sizing, while complying with EPBD (Solar Rooftop Initiative) mandates for new and existing buildings.",
+      "icon": "MapPin"
+    },
+    {
+      "title": "Theoretical 4: Project Management & Preparation",
+      "description": "Covering project lifecycles, milestone tracking, and managing essential pre-installation documentation.",
+      "icon": "ClipboardCheck"
+    },
+    {
+      "title": "Theoretical 5: Installation Safety & Best Practices",
+      "description": "Focusing on DGUV Vorschrift 3 protocols, correct PPE usage, and safe handling of DC electricity and batteries.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "title": "Theoretical 6: System Programming & Energy Calculation",
+      "description": "Performing electric energy calculations, programming inverter settings, and testing module performance.",
+      "icon": "Cpu"
+    }
+  ],
+  "practicalModules": [
+    {
+      "title": "Practical 1: Mounting Structures & Physical Installation",
+      "description": "Hands-on practice installing mounting structures and physically securing solar panels on both flat and sloped roofs, ensuring compliance with DIN EN 1991 and new EPBD 'solar ready' building standards.",
+      "icon": "Hammer"
+    },
+    {
+      "title": "Practical 2: Electrical Wiring & DC Connections",
+      "description": "Hands-on practice wiring all DC-side components, including string cabling, DC isolators, and batteries, following\n VDE 0100-712 standards.",
+      "icon": "Cable"
+    },
+    {
+      "title": "Practical 3: Inverter Mounting & DC Commissioning",
+      "description": "Covering the physical mounting of inverters, connecting all DC-side inputs, and preparing the AC output for final connection by a certified electrician.",
+      "icon": "Plug"
+    },
+    {
+      "title": "Practical 4: Operations, Maintenance & Troubleshooting",
+      "description": "Learning systematic troubleshooting according to IEC 62446, including DC-side repair and understanding the new\n A-G Energy Labels for modules.",
+      "icon": "Wrench"
+    }
+  ],
+  "videoSection": {
+    "title": "Training in Action",
+    "description": "Watch interviews with previous participants of our program.",
+    "buttonText": "View All Videos on YouTube →"
+  },
+  "videos": [
+    {
+      "id": "ldLoVQ4ywDk",
+      "title": "Solar Technician Training",
+      "delay": "0ms"
+    },
+    {
+      "id": "GHVpQlqd5Z8",
+      "title": "On-grid/Off-grid",
+      "delay": "100ms"
+    },
+    {
+      "id": "Q-RqpJqscBc",
+      "title": "Future Perspectives",
+      "delay": "200ms"
+    }
+  ],
+  "accreditation": {
+    "title": "A Certification That Opens Doors Across Europe",
+    "description": "This curriculum is being developed with support from InnoEnergy, the BMWK, and the IOM to create a new, EU-wide standard for Solar Technicians. This qualification is designed to give participants energy autonomy and career mobility with European employers powering the energy transition."
+  },
+  "badges": [
+    "EPBD-Ready",
+    "Climate Career Kickstart",
+    "Professional Mobility",
+    "International Focus"
+  ],
+  "finalCTA": {
+    "title": "Ready to Begin Your Solar Career?",
+    "subtitle": "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
+    "buttonText": "Apply Now →"
+  }
+}

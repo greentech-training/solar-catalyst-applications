@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "email": "info@greentech.training",
+    "phone": "+49 123 456 7890",
+    "address": "Goerzallee 299, 14167 Berlin Zehlendorf, Germany"
+  },
+  "program": {
+    "startDate": "Q1 2026",
+    "location": "Bremerhaven",
+    "cost": "100% Free",
+    "duration": "Several months"
+  },
+  "company": {
+    "name": "greentech.training",
+    "vatNumber": "DE253336600",
+    "representative": "Jerome Goerke"
+  }
+}

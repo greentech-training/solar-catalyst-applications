@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "Start Your Career in the Energy Transition",
+    "subtitle": "Become a certified Solar Technician.",
+    "subtitle2": "The pilot program is 100% free.",
+    "buttonText": "Apply Now"
+  },
+  "opportunity": {
+    "title": "New EU-Wide Harmonised Solar Training",
+    "description": "The German pilot of a new, internationally-recognized Solar Technician certification is launching to meet the demands of new EU regulations. This community-driven initiative combines expert-led online learning with hands-on practical training. The program trains technicians in the latest IEC and VDE standards, as well as new EU requirements and the mandatory installations required by the Energy Performance of Buildings Directive."
+  },
+  "infoCards": [
+    {
+      "title": "100% Free",
+      "subtitle": "(Pilot Program Only)"
+    },
+    {
+      "title": "Bremerhaven and Berlin",
+      "subtitle": "At Partnering Facilities"
+    },
+    {
+      "title": "EU-wide harmonised training",
+      "subtitle": "European Solar Academy"
+    }
+  ],
+  "modules": [
+    "Fundamentals of Solar PV Energy",
+    "System Components & Design Principles",
+    "Safe Installation & On-Site Practice",
+    "Commissioning, Maintenance & Troubleshooting",
+    "German Electrical Standards & Regulations"
+  ],
+  "requirements": [
+    "You are 18 years or older",
+    "You have B1 level German (or higher)",
+    "You have a strong academic record \n in STEM fields",
+    "You have access to a laptop\n for online learning"
+  ],
+  "enrollTitle": "Power Your Future",
+  "enrollSubtitle": "The only requirements for the pilot program are:",
+  "partnersTitle": "Backed by Global Leaders in Energy & Innovation",
+  "partnersSubtitle": "This program is made possible through a partnership with leading community and international organizations.",
+  "finalCTA": {
+    "title": "Don't Miss This. Your Solar Career Starts Here.",
+    "subtitle": "Apply for the free Bremerhaven or Berlin pilot programs today.\n Spaces are limited.",
+    "buttonText": "Apply now"
+  }
+}

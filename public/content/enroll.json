@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Apply Now",
+    "description": "Selection for the pilot programs is based on a number of criteria: It is open to anyone in Germany aged over 18 with at least a CEF-B1 German level. Selection will be based on previous STEM performance, location, demonstrated civic engagement, and expressed desire to enter a climate career. Online training for selected participated is slated to begin in the summer of 2026, with practical training at the partnering facilities commencing after successful completion of the online component."
+  },
+  "processSteps": [
+    "Submit Application",
+    "Online Interview",
+    "Review",
+    "Acceptance",
+    "Program Start"
+  ],
+  "form": {
+    "title": "Application Form",
+    "stemQuestionLabel": "Please explain why you are seeking a career in climate, your current German level, and finish by briefly describing your academic record in STEM (Science, Tech, Engineering, Math). You can answer in German or English. *",
+    "consentLabel": "I confirm the information provided is accurate and I consent to be contacted about my application. *",
+    "submitButtonText": "Submit My Application"
+  },
+  "successMessage": {
+    "title": "Thank You for Applying!",
+    "description": "We have received your application. Our team will review it and contact you via email within 5-7 business days to schedule your online interview.",
+    "note": "Please check your email regularly, including your spam folder, for our response."
+  }
+}

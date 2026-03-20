@@ -1,0 +1,202 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { HelpCircle } from "lucide-react";
+import { useEffect } from "react";
+import { useContent } from "@/hooks/useContent";
+
+const FAQ = () => {
+  // CMS Integration - optional, falls back to hardcoded
+  const { content } = useContent('faq');
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll(".scroll-reveal").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const faqs = content.faqs || [
+    {
+      question: "What does the program cost?",
+      answer:
+        "The initial pilot program in Bremerhaven is 100% free for all accepted participants with a one-off recruitment and qualification fee charged to hiring partners. The fee is based on your first month's wage and includes all online learning materials, hands-on practical training, and certification costs.",
+    },
+    {
+      question: "Who can apply?",
+      answer:
+        "Anyone over the age of 18, regardless of status. You must have B1 level German, access to a laptop, and a strong STEM academic record.",
+    },
+    {
+      question: "What job can I get after this?",
+      answer:
+        "You will be qualified to work as a Solar Technician for local installation companies. This can either be in the office working with energy calculation software and/or in the field under the supervision of a Master Electrician or Roofer as an installer.",
+    },
+    {
+      question: "Is the training online or in-person?",
+      answer:
+        "It's both. The program uses a 'blended' model. You will complete theory modules online at your own pace and attend mandatory in-person practical training at our Bremerhaven facility (WERK), with a Berlin facility currently in planning.",
+    },
+    {
+      question: "What does 'B1 German' mean?",
+      answer:
+        "This is an intermediate level of German according to the Common European Framework of Reference for Languages (CEFR). You must be able to understand and communicate comfortably on everyday topics and in a work environment. This ensures you can follow technical instructions and communicate effectively on installation sites.",
+    },
+    {
+      question: "What do you mean by 'strong STEM academic record'?",
+      answer:
+        "This means you have good grades or proven experience in science, technology, engineering, or mathematics. This helps ensure you can succeed with the technical parts of the course, such as electrical systems, system design, and troubleshooting.",
+    },
+    {
+      question: "How long does the program take to complete?",
+      answer:
+        "The program is designed to be flexible with your schedule. The online theory modules can be completed at your own pace, while the hands-on practical training sessions are scheduled at regular intervals lasting up to two weeks. The full course can be completed in one to two months, depending on when the practical component is scheduled.",
+    },
+    {
+      question: "Is the certification recognized across Europe?",
+      answer:
+        "InnoEnergy has developed a harmonised training framework for Solar Technicians, taking into account the requirements of different Member States. They are working on establishing a qualification that will be recognized by employers across the continent.",
+    },
+    {
+      question: "Do I need previous experience in solar energy or electrical work?",
+      answer:
+        "No previous experience is required. However, a strong academic background in STEM fields helps you with the technical concepts. Electrical experience is a bonus but not mandatory.",
+    },
+    {
+      question: "What equipment do I need?",
+      answer:
+        "You need access to a laptop with a reliable internet connection for the online learning modules. All practical training equipment is provided at our Bremerhaven facility (WERK).",
+    },
+    {
+      question: "What if I can't attend or I'm not accepted into the free pilot?",
+      answer:
+        "Participation in future courses (post-pilot) can either be paid individually or via sponsorship by hiring partners. Participants are therefore encouraged to contact and direct reputable solar firms to the program to initiate sponsorship for future cohorts.",
+    },
+    {
+      question: "How do I apply?",
+      answer:
+        "Simply click the 'Apply Now' button and complete the application form. A Solar Catalyst team member will review your submission and, if provisionally accepted for interview, will contact you within 5–7 business days to confirm your spoken German level and other details.",
+    },
+    {
+      question: "Can I install a PV System independently?",
+      answer:
+        "No. The course is designed to prepare you for office or field work under the supervision of a Master Electrician or Roofer, and is not currently geared toward individual installation. Final grid connection in Germany must be performed by a registered and certified electrician.",
+    },
+    {
+      question: "What about insurance?",
+      answer:
+        "Participants taking part in the physical installation do so under accident insurance offered by greentech.training. In 2026, greentech.training will be working with insurers to develop policies especially for Solar Technicians as a newly accredited professional class in the field.",
+    },
+    {
+      question: "How is the training performed?",
+      answer:
+        "Those who are required to undergo preliminary technical German language training must pass a final oral assessment to advance to the theoretical training. Up to 15 participants can attend these language sessions, with 4 × 90-minute live sessions. Only 10 participants will be selected for advancement based on the assessors' overall evaluation. After completing the theory component, participants must pass a final assessment to advance to the practical training. A certificate is issued only after successful completion of the practical stage by InnoEnergy's Skills Institute as part of the European Solar Academy.",
+    },
+    {
+      question: "Is there additional German training to help me prepare for the course?",
+      answer:
+        "Yes. Participants at B1 level are offered free online vocabulary training for both the theory and practical components (pilot only), along with optional live sessions to practice with other cohort members.",
+    },
+    {
+      question: "Is there a German equivalent for a Solar Technician?",
+      answer:
+        "No. This is a new professional class created in response to the growing demand for specialists in solar installation and energy calculation. It is not equivalent to a Master Electrician or prerequisite classes like EffT or EUP, but working-at-heights training will be provided.",
+    },
+    {
+      question: "Will the program help me find an apprenticeship?",
+      answer:
+        "That is what the program is designed to do, yes. However, apprentices are always selected by the hiring companies themselves and must be certified to train apprentices.",
+    },
+    {
+      question: "Is the program linked to the Jobcenter?",
+      answer:
+        "No. While the pilot is free for ten people, future sessions will either be paid by participants themselves or sponsored by hiring companies to match market demand for solar talent.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen pt-20">
+      {/* Hero Section */}
+      <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <div className="scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
+            <div className="inline-flex items-center justify-center w-16 h-16 mb-6">
+              <HelpCircle className="w-10 h-10 text-primary-foreground" strokeWidth={1.5} />
+            </div>
+            <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              {content.hero?.title || "Frequently Asked Questions"}
+            </h1>
+            <p className="text-sm sm:text-lg md:text-xl opacity-95 max-w-3xl mx-auto leading-relaxed">
+              {content.hero?.subtitle || "Find answers to common questions about the Solar Catalyst program"}
+            </p>
+          </div>
+        </div>
+      </section>
+        
+      {/* FAQ Accordion */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="scroll-reveal opacity-0 translate-y-4 transition-all duration-500 bg-card border border-border rounded-sm px-6 shadow-sm hover:shadow-md hover:border-primary"
+                  style={{ transitionDelay: `${index * 50}ms` }}
+                >
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-foreground pr-4">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pt-2 pb-6 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Still Have Questions */}
+      <section className="py-20 md:py-28 bg-softyellow">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <div className="scroll-reveal opacity-0 translate-y-6 transition-all duration-700">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              {content.cta?.title || "Still Have Questions?"}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+              {content.cta?.description || "Don't let unanswered questions hold you back from starting your solar career."}<br />{content.cta?.description2 || "Apply now and we'll answer all your questions during the interview process."}
+            </p>
+            <Link to="/enroll">
+              <Button 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg rounded-sm transition-all hover:shadow-lg"
+              >
+                {content.cta?.buttonText || "Apply Now"}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        .scroll-reveal.show {
+          opacity: 1 !important;
+          transform: translate(0, 0) scale(1) !important;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default FAQ;

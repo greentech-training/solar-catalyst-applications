@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* EU Official Color System - From ec.europa.eu */
+@layer base {
+  :root {
+    /* Base */
+    --background: 0 0% 100%; /* White #FFFFFF */
+    --foreground: 0 0% 25%; /* EC Grey 100 #404040 */
+    
+    /* EU Primary Blue #004494 */
+    --primary: 212 100% 29%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* EU Yellow #FFD617 */
+    --secondary: 48 100% 54%;
+    --secondary-foreground: 0 0% 25%;
+    
+    /* Accent (same as secondary) */
+    --accent: 48 100% 54%;
+    --accent-foreground: 0 0% 25%;
+    
+    /* EC Grey 5 #F5F5F5 */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 44%; /* EC Grey 75 #707070 */
+
+    --softyellow: 45 100% 96%; /* Lighter Yellow for backgrounds */
+    
+    /* Borders - EC Grey 10 #EBEBEB */
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 212 100% 29%;
+    
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 25%;
+    
+    /* Notifications */
+    --destructive: 354 75% 51%; /* EC Red #DA2131 */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Minimal radius */
+    --radius: 0.25rem;
+    
+    /* NO gradients - solid colors only */
+    --gradient-hero: hsl(212 100% 29%);
+    --gradient-solar: hsl(48 100% 54%);
+    --gradient-subtle: hsl(0 0% 96%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+/* --- WAVE ANIMATION --- */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave {
+  animation: wave 1.2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
