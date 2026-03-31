@@ -1,11 +1,11 @@
 {
   "hero": {
     "title": "Training Facilities",
-    "description": "The first German program is hosted in partnership with WERK in Bremerhaven and Kulturmarkthalle in Berlin. These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."
+    "description": "The first German program is hosted in partnership with Kulturmarkthalle in Berlin with WERK Bremerhaven slated for late 2026. These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."
   },
   "facility": {
     "title": "KulturMarktHalle Berlin",
-    "subtitle": "Hosted by WERK, at the heart of Germany's renewable energy hub",
+    "subtitle": "Hosted by KulturMarktHalle in Berlin's Neukölln District.",
     "addressTitle": "KulturMarktHalle Berlin",
     "address": "Hanns-Eisler-Str. 93, 10409 Berlin"
   },
