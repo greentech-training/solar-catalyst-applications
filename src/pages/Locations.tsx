@@ -81,7 +81,7 @@ const Locations = () => {
               {content.hero?.title || "Training Facilities"}
             </h1>
             <p className="text-sm sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              {content.hero?.description || "The first German program is hosted in partnership with Kulturmarkthalle in Berlin and WERK in Bremerhaven (feasible start Q4 2026) . These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."}
+              {content.hero?.description || "The first German program is hosted in partnership with Kulturmarkthalle in Berlin with WERK Bremerhaven slated for late 2026. These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."}
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const Locations = () => {
                 {content.facility?.title || "KulturMarktHalle Berlin"}
               </h2>
               <p className="text-sm sm:text-md md:text-lg text-muted-foreground">
-                {content.facility?.subtitle || "Hosted by WERK, at the heart of Germany's renewable energy hub"}
+                {content.facility?.subtitle || "Hosted by KulturMarktHalle in Berlin's Neukölln District."}
               </p>
             </div>
 
@@ -146,7 +146,7 @@ const Locations = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
+      {/* Partners Section
       <section className="py-20 md:py-28 bg-softyellow">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal opacity-0 translate-y-6 transition-all duration-700">
@@ -183,7 +183,7 @@ const Locations = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Future Locations */}
       <section className="py-20 md:py-28 bg-background">

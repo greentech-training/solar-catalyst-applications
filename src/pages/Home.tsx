@@ -117,7 +117,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               {[
                 { icon: Award, title: content.infoCards?.[0]?.title || "100% Free", subtitle: content.infoCards?.[0]?.subtitle || "(Pilot Program Only)", delay: "0ms" },
-                { icon: MapPin, title: content.infoCards?.[1]?.title || "Bremerhaven and Berlin ", subtitle: content.infoCards?.[1]?.subtitle || "WERK At Partnering Facilities", delay: "100ms" },
+                { icon: MapPin, title: content.infoCards?.[1]?.title || " Berlin ", subtitle: content.infoCards?.[1]?.subtitle || "WERK KulturMarktHalle", delay: "100ms" },
                 { icon: Users, title: content.infoCards?.[2]?.title || "EU-wide harmonised training", subtitle: content.infoCards?.[2]?.subtitle || "European Solar Academy", delay: "200ms" },
               ].map((item, idx) => (
                 <Card
@@ -308,7 +308,7 @@ const Home = () => {
             {content.finalCTA?.title || "Don't Miss This. Your Solar Career Starts Here."}
           </h2>
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
-            {content.finalCTA?.subtitle || "Apply for the free Bremerhaven or Berlin pilot programs today. Spaces are limited."}
+            {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today.Spaces are limited."}
           </p>
           <Link to="/enroll">
             <Button

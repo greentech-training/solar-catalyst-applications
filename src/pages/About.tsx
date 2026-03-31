@@ -36,7 +36,7 @@ const About = () => {
               {content.hero?.title || "Building an international harmonised\n approach to training green skills"}
             </h1>
             <p className="text-lg sm:text-lg md:text-xl opacity-95 max-w-3xl mx-auto leading-relaxed">
-              {content.hero?.description || "This initiative seeks to cultivate an international community of qualified technicians to power the energy transition. As a new approach to training, it focuses on"} <br /> {content.hero?.description2 || "empowerment, energy autonomy and professional integration."}
+              {content.hero?.description || "This initiative seeks to cultivate an international community of qualified installers to power the energy transition. As a new approach to training, it focuses on"} <br /> {content.hero?.description2 || "empowerment, energy autonomy and professional integration."}
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ const About = () => {
               {content.germanPilot?.title || "The German Pilot "}<span className="text-primary">{content.germanPilot?.titleHighlight || "(Solar Catalyst)"}</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              {content.germanPilot?.description || "The pilot programs set to occur in Berlin and Bremerhaven have been crafted with local partners to best facilitate the unprecedented regional job growth projected for the solar sector."}
+              {content.germanPilot?.description || "The pilot programs set to occur in Berlin and Bremerhaven (late 2026) have been crafted with local partners to best facilitate the unprecedented regional job growth projected for the solar sector."}
             </p>
 
             <div className="scroll-reveal opacity-0 scale-95 transition-all duration-700 bg-softyellow border border-border p-10 rounded-sm shadow-md text-center">
@@ -156,13 +156,13 @@ const About = () => {
                 delay: "100ms"
               },
               {
-                title: "IOM",
-                description: "International initator of the successful Lebanon pilot, providing expertise in integration and empowerment program.",
+                title: "BMWE",
+                description: "Federal department driving the transition to a climate-neutral economy by funding innovative pioneer solutions for societal challenges via the IGP.",
                 delay: "200ms"
               },
               {
                 "title": "greentech.training",
-                "description": "A specialized training initiative bridging the skills gap by recruiting and preparing international talent for Germany's renewable energy sector through expert-led and \npractical education.",
+                "description": "A specialized training initiative bridging the skills gap by recruiting and preparing international talent for the green transition through expert-led and practical education.",
                 "delay": "300ms"
               },
               {
@@ -237,7 +237,7 @@ function LebanonPilotSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10 scroll-reveal opacity-0 translate-y-6 transition-all duration-700">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              A Proven Model: From MENA to EU
+              Powering the Future
             </h2>
           </div>
           <Card className="scroll-reveal opacity-0 scale-95 transition-all duration-700 border-border rounded-sm shadow-md">
@@ -253,10 +253,8 @@ function LebanonPilotSection() {
               </div>
 
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-                The curriculum's framework was first applied internationally in Lebanon,
-                supported by InnoEnergy and the International Organisation for Migration (IOM).
-                With funding provided by Germany's Federal Ministry for Economic Affairs and Energy,
-                the training program is now launching in Germany to meet the critical demands of the European energy transition.
+                  With funding provided by Germany's Federal Ministry for Economic Affairs and Energy,
+                  the training program is launching in Germany to help meet the critical talent demands of the European energy transition.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

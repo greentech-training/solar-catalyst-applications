@@ -170,7 +170,7 @@ const HiringPartners = () => {
                   className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold rounded-sm transition-all"
                   onClick={() => {
                     const link = document.createElement('a');
-                    link.href = 'https://greentech.training/wp-content/uploads/2026/02/Solar-Catalyst-Broschure.pdf';
+                    link.href = ' https://greentech.training/wp-content/uploads/2026/03/Solar-Catalyst-Broschure-DE.pdf';
                     link.download = 'Solar-Catalyst-Brochure.pdf';
                     link.target = '_blank';
                     document.body.appendChild(link);
@@ -179,7 +179,7 @@ const HiringPartners = () => {
                   }}
                 >
                   <Download className="w-5 h-5 mr-2" />
-                  {content.cta?.downloadButtonText || "Download Program Brochure"}
+                  {content.cta?.downloadButtonText || "Download German Program Brochure"}
                 </Button>
               <a href="mailto:partners@greentech.training">
                 <Button 

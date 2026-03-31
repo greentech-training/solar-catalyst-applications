@@ -29,7 +29,7 @@ const FAQ = () => {
     {
       question: "What does the program cost?",
       answer:
-        "The initial pilot program in Bremerhaven is 100% free for all accepted participants with a one-off recruitment and qualification fee charged to hiring partners. The fee is based on your first month's wage and includes all online learning materials, hands-on practical training, and certification costs.",
+        "The initial pilot program in Berlin is 100% free for all accepted participants with a one-off recruitment and qualification fee charged to hiring partners. The fee is based on the first month's wage and includes all online learning materials, hands-on practical training, and certification costs. Alternative trial or temporary engagement options are also possible in some cases.",
     },
     {
       question: "Who can apply?",
@@ -44,7 +44,7 @@ const FAQ = () => {
     {
       question: "Is the training online or in-person?",
       answer:
-        "It's both. The program uses a 'blended' model. You will complete theory modules online at your own pace and attend mandatory in-person practical training at our Bremerhaven facility (WERK), with a Berlin facility currently in planning.",
+        "It's both. The program uses a 'blended' model. You will complete theory modules online at your own pace and attend mandatory in-person practical training at a partnering community facility.",
     },
     {
       question: "What does 'B1 German' mean?",
@@ -59,7 +59,7 @@ const FAQ = () => {
     {
       question: "How long does the program take to complete?",
       answer:
-        "The program is designed to be flexible with your schedule. The online theory modules can be completed at your own pace, while the hands-on practical training sessions are scheduled at regular intervals lasting up to two weeks. The full course can be completed in one to two months, depending on when the practical component is scheduled.",
+        "The program is designed to be flexible with your schedule. The online theory modules can be completed at your own pace, generally up to two weeks, while the hands-on practical training sessions are scheduled over an intensive single week period. The full course is therefore expected to be completed within a month, depending on when the practical component is scheduled.",
     },
     {
       question: "Is the certification recognized across Europe?",
@@ -74,7 +74,7 @@ const FAQ = () => {
     {
       question: "What equipment do I need?",
       answer:
-        "You need access to a laptop with a reliable internet connection for the online learning modules. All practical training equipment is provided at our Bremerhaven facility (WERK).",
+        "You need access to a laptop with a reliable internet connection for the online learning modules. All practical training equipment such as steel cap boots, overalls and gloves are available at the partnering facilities.",
     },
     {
       question: "What if I can't attend or I'm not accepted into the free pilot?",
@@ -89,17 +89,17 @@ const FAQ = () => {
     {
       question: "Can I install a PV System independently?",
       answer:
-        "No. The course is designed to prepare you for office or field work under the supervision of a Master Electrician or Roofer, and is not currently geared toward individual installation. Final grid connection in Germany must be performed by a registered and certified electrician.",
+        "No. The course is designed to prepare candidates for both office and/or field work under the supervision of a Master Electrician or Roofer, and is being designed to create the Solar Installer as new professional cateogory for the energy transition. Final grid connection in Germany must be performed by a registered and certified electrician.",
     },
     {
       question: "What about insurance?",
       answer:
-        "Participants taking part in the physical installation do so under accident insurance offered by greentech.training. In 2026, greentech.training will be working with insurers to develop policies especially for Solar Technicians as a newly accredited professional class in the field.",
+        "Participants taking part in the physical installation do so under accident insurance offered by partnering community faciltiies. ",
     },
     {
       question: "How is the training performed?",
       answer:
-        "Those who are required to undergo preliminary technical German language training must pass a final oral assessment to advance to the theoretical training. Up to 15 participants can attend these language sessions, with 4 × 90-minute live sessions. Only 10 participants will be selected for advancement based on the assessors' overall evaluation. After completing the theory component, participants must pass a final assessment to advance to the practical training. A certificate is issued only after successful completion of the practical stage by InnoEnergy's Skills Institute as part of the European Solar Academy.",
+        "Those who are required to undergo preliminary technical German language training must pass a final oral assessment to advance to the theoretical training. Up to 15 participants can attend these language sessions, with 3 × 90-minute live sessions. Up to 10 participants will be selected for advancement to the theory stage based on the assessors' overall evaluation. After completing the theory component, participants advance to the practical training. A certificate is issued only after successful completion of the practical stage by InnoEnergy's Skills Institute as part of the European Solar Academy.",
     },
     {
       question: "Is there additional German training to help me prepare for the course?",

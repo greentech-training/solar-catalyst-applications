@@ -327,7 +327,7 @@ const Program = () => {
               {content.accreditation?.title || "A Certification That Opens Doors Across Europe"}
             </h2>
             <p className="text-xs sm:text-md md:text-xl opacity-95 mb-10 leading-relaxed">
-              {content.accreditation?.description || "This curriculum is being developed with support from InnoEnergy, the BMWK, and the IOM to create a new, EU-wide standard for Solar Technicians. This qualification is designed to give participants energy autonomy and career mobility with European employers powering the energy transition."}
+              {content.accreditation?.description || "This curriculum is being developed with support from InnoEnergy, Solar Power Europe and the BMWE to create a new, EU-wide standard for Solar Technicians. This qualification is designed to give participants energy autonomy and career mobility with European employers powering the energy transition."}
             </p>
 
             {/* Professional badge list */}
@@ -353,7 +353,7 @@ const Program = () => {
               {content.finalCTA?.title || "Ready to Begin Your Solar Career?"}
             </h2>
             <p className="text-sm sm:text-md md:text-xl text-muted-foreground mb-10">
-              {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today. Spaces are limited."}
+              {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today. Bremerhaven Facility launching late 2026."}
             </p>
             
             <Link to="/enroll">
