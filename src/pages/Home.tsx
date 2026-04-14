@@ -5,7 +5,7 @@ import { CheckCircle, Award, Users, MapPin, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useContent } from "@/hooks/useContent";
 import heroVideo from "@/assets/hero-solar.mp4";
-import trainingImage from "@/assets/training-facility.avif";
+import trainingImage from "@/assets/trainingImage.png";
 import eitLogo from "@/assets/logos/eit-innoenergy.png";
 import werkLogo from "@/assets/logos/werk.png";
 import iomLogo from "@/assets/logos/iom.png";

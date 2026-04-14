@@ -10,6 +10,16 @@ import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { useContent } from "@/hooks/useContent";
 
+// ✅ CONFIGURATION: Put the MongoDB course IDs you're advertising here
+// Examples: 1 course, 2 courses, or 3 courses - just edit this array
+const COURSE_IDS = [
+  "69de24d07e48dc43dfd861e0", // Change to actual MongoDB ObjectId
+  // "course-id-2", // Uncomment/add more IDs if advertising multiple courses
+  // "course-id-3",
+];
+
+const API_URL = import.meta.env.VITE_API_URL || "https://decarboniser.greentech.training/api/applications";
+
 const Enroll = () => {
   const { toast } = useToast();
   const { content } = useContent('enroll');
@@ -32,6 +42,7 @@ const Enroll = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -39,6 +50,9 @@ const Enroll = () => {
     address: "",
     postcode: "",
     city: "",
+    // Company conditional fields
+    isRelatedToCompany: "no",
+    companyName: "",
     hasGerman: "",
     hasLaptop: "",
     stemExperience: "",
@@ -71,30 +85,50 @@ const Enroll = () => {
     setIsSubmitting(true);
 
     try {
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyYYJXlb_SdsC5YhQ6sIyK9UJ09_18zi4BccqtIXJml4UL_FM7M6m_RdVUVfXWijF-VlA/exec";
-      
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      const applicationData = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phoneNumber: formData.phone,
+        streetAddress: formData.address,
+        postCode: formData.postcode,
+        city: formData.city,
+        company: formData.isRelatedToCompany === "yes" ? formData.companyName : undefined,
+        hasGermanB1: formData.hasGerman === "yes",
+        hasLaptopAndInternet: formData.hasLaptop === "yes",
+        motivationLetter: formData.stemExperience,
+        interviewAvailability: formData.interviewDays,
+        preferredTime: formData.interviewTime,
+        consentGiven: formData.consent,
+        courseIds: COURSE_IDS, // ✅ Now sends array of course IDs
+        sourceWebsite: window.location.origin
+      };
+
+      const response = await fetch(`${API_URL}/submit`, {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(applicationData),
       });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit application");
+      }
       
-      console.log("Form submitted:", formData);
       setSubmitted(true);
       
       toast({
         title: "Application Submitted!",
-        description: "We'll contact you within 5-7 business days.",
+        description: `Successfully applied for ${data.data.created} course(s). We'll contact you within 5-7 business days.`,
       });
       
-    } catch (error) {
+    } catch (error: any) {
       console.error("Submission error:", error);
       toast({
         title: "Submission Failed",
-        description: "There was an error submitting your application. Please try again or contact us directly.",
+        description: error.message || "There was an error submitting your application. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -131,11 +165,14 @@ const Enroll = () => {
               <h1 className="text-4xl font-bold text-foreground mb-4">
                 {content.successMessage?.title || "Thank You for Applying!"}
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                {content.successMessage?.description || "We have received your application. Our team will review it and contact you via email within 5-7 business days to schedule your online interview."}
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                {content.successMessage?.description || `We have received your application for ${COURSE_IDS.length} course(s).`}
               </p>
-              <p className="text-muted-foreground">
-                {content.successMessage?.note || "Please check your email regularly, including your spam folder, for our response."}
+              <p className="text-sm text-muted-foreground mb-4">
+                Our team will review your application(s) and contact you via email within 5-7 business days.
+              </p>
+              <p className="text-muted-foreground text-sm">
+                {content.successMessage?.note || "Please check your email regularly, including your spam folder."}
               </p>
             </CardContent>
           </Card>
@@ -200,6 +237,11 @@ const Enroll = () => {
               <CardTitle className="text-2xl text-foreground">
                 {content.form?.title || "Application Form"}
               </CardTitle>
+              {COURSE_IDS.length > 1 && (
+                <p className="text-sm text-muted-foreground mt-2">
+                  This application is for {COURSE_IDS.length} courses/programs
+                </p>
+              )}
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -288,6 +330,43 @@ const Enroll = () => {
                       />
                     </div>
                   </div>
+
+                  {/* Company Section - Conditional */}
+                  <div className="pt-4 border-t border-border/50">
+                    <Label>Are you related to a company? *</Label>
+                    <RadioGroup
+                      required
+                      value={formData.isRelatedToCompany}
+                      onValueChange={(value) => setFormData({...formData, isRelatedToCompany: value})}
+                      disabled={isSubmitting}
+                      className="mt-2 flex gap-4"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="yes" id="company-yes" disabled={isSubmitting} />
+                        <Label htmlFor="company-yes" className="font-normal">Yes</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="no" id="company-no" disabled={isSubmitting} />
+                        <Label htmlFor="company-no" className="font-normal">No</Label>
+                      </div>
+                    </RadioGroup>
+
+                    {/* Conditional Company Input */}
+                    {formData.isRelatedToCompany === "yes" && (
+                      <div className="mt-4 animate-in slide-in-from-top-2 duration-300">
+                        <Label htmlFor="companyName">Company Name *</Label>
+                        <Input
+                          id="companyName"
+                          required={formData.isRelatedToCompany === "yes"}
+                          value={formData.companyName}
+                          onChange={(e) => setFormData({...formData, companyName: e.target.value})}
+                          placeholder="Enter company name"
+                          disabled={isSubmitting}
+                          className="rounded-sm mt-1"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Part 2: Pre-Screening Questionnaire */}
@@ -301,14 +380,15 @@ const Enroll = () => {
                       value={formData.hasGerman}
                       onValueChange={(value) => setFormData({...formData, hasGerman: value})}
                       disabled={isSubmitting}
+                      className="mt-2 flex gap-4"
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="yes" id="german-yes" disabled={isSubmitting} />
-                        <Label htmlFor="german-yes">Yes</Label>
+                        <Label htmlFor="german-yes" className="font-normal">Yes</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="no" id="german-no" disabled={isSubmitting} />
-                        <Label htmlFor="german-no">No</Label>
+                        <Label htmlFor="german-no" className="font-normal">No</Label>
                       </div>
                     </RadioGroup>
                   </div>
@@ -320,14 +400,15 @@ const Enroll = () => {
                       value={formData.hasLaptop}
                       onValueChange={(value) => setFormData({...formData, hasLaptop: value})}
                       disabled={isSubmitting}
+                      className="mt-2 flex gap-4"
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="yes" id="laptop-yes" disabled={isSubmitting} />
-                        <Label htmlFor="laptop-yes">Yes</Label>
+                        <Label htmlFor="laptop-yes" className="font-normal">Yes</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="no" id="laptop-no" disabled={isSubmitting} />
-                        <Label htmlFor="laptop-no">No</Label>
+                        <Label htmlFor="laptop-no" className="font-normal">No</Label>
                       </div>
                     </RadioGroup>
                   </div>
@@ -355,7 +436,7 @@ const Enroll = () => {
                   
                   <div>
                     <Label>What is the best day of the week for an online interview? *</Label>
-                    <div className="space-y-2 mt-2">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
                       {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
                         <div key={day} className="flex items-center space-x-2">
                           <Checkbox
@@ -364,7 +445,7 @@ const Enroll = () => {
                             onCheckedChange={(checked) => handleDayChange(day, checked as boolean)}
                             disabled={isSubmitting}
                           />
-                          <Label htmlFor={day} className="font-normal">{day}</Label>
+                          <Label htmlFor={day} className="font-normal cursor-pointer">{day}</Label>
                         </div>
                       ))}
                     </div>
@@ -377,14 +458,15 @@ const Enroll = () => {
                       value={formData.interviewTime}
                       onValueChange={(value) => setFormData({...formData, interviewTime: value})}
                       disabled={isSubmitting}
+                      className="mt-2 flex gap-4"
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="morning" id="time-morning" disabled={isSubmitting} />
-                        <Label htmlFor="time-morning">Morning</Label>
+                        <Label htmlFor="time-morning" className="font-normal">Morning</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="afternoon" id="time-afternoon" disabled={isSubmitting} />
-                        <Label htmlFor="time-afternoon">Afternoon</Label>
+                        <Label htmlFor="time-afternoon" className="font-normal">Afternoon</Label>
                       </div>
                     </RadioGroup>
                   </div>
@@ -392,14 +474,15 @@ const Enroll = () => {
 
                 {/* Part 4: Confirmation */}
                 <div className="space-y-4 pt-6 border-t border-border scroll-reveal opacity-0 translate-y-6 transition-all duration-500" style={{ transitionDelay: '400ms' }}>
-                  <div className="flex items-start space-x-2">
+                  <div className="flex items-start space-x-2 bg-secondary/5 p-4 rounded-sm">
                     <Checkbox
                       id="consent"
                       checked={formData.consent}
                       onCheckedChange={(checked) => setFormData({...formData, consent: checked as boolean})}
                       disabled={isSubmitting}
+                      className="mt-1"
                     />
-                    <Label htmlFor="consent" className="font-normal">
+                    <Label htmlFor="consent" className="font-normal text-sm cursor-pointer">
                       {content.form?.consentLabel || "I confirm the information provided is accurate and I consent to be contacted about my application. *"}
                     </Label>
                   </div>
@@ -418,7 +501,9 @@ const Enroll = () => {
                       Submitting...
                     </>
                   ) : (
-                    content.form?.submitButtonText || "Submit My Application"
+                    COURSE_IDS.length > 1 
+                      ? `Apply for ${COURSE_IDS.length} Courses` 
+                      : "Submit My Application"
                   )}
                 </Button>
               </form>
@@ -431,6 +516,19 @@ const Enroll = () => {
         .scroll-reveal.show {
           opacity: 1 !important;
           transform: translate(0, 0) scale(1) !important;
+        }
+        @keyframes slide-in-from-top {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-in {
+          animation: slide-in-from-top 0.3s ease-out;
         }
       `}</style>
     </div>
