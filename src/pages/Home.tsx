@@ -135,14 +135,51 @@ const Home = () => {
                 </Card>
               ))}
             </div>
-          <div className="scroll-reveal opacity-0 scale-95 transition-all duration-700">
-            <div className="relative overflow-hidden rounded-sm shadow-lg">
-              <img src={trainingImage} alt="Solar training facility" className="w-full h-[450px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
-                <p className="text-primary-foreground text-2xl font-semibold">Training Facility</p>
-              </div>
-            </div>
+<div className="scroll-reveal opacity-0 scale-95 transition-all duration-700">
+  <div className="grid md:grid-cols-12 gap-0 rounded-sm shadow-xl overflow-hidden border border-border bg-card">
+    {/* Image Side - takes 8/12 columns on desktop */}
+    <div className="md:col-span-8 relative aspect-[4/3] md:aspect-auto md:h-[500px] overflow-hidden">
+      <img 
+        src={trainingImage} 
+        alt="Solar training facility" 
+        className="absolute inset-0 w-full h-full object-cover object-center" 
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20 md:to-transparent" />
+    </div>
+    
+    {/* Content Side - takes 4/12 columns */}
+    <div className="md:col-span-4 bg-card p-6 md:p-8 flex flex-col justify-center relative">
+      {/* Decorative element */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-transparent" />
+      
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 text-muted-foreground text-sm uppercase tracking-wider font-medium">
+          <MapPin className="w-4 h-4" />
+          <span>Berlin Location</span>
+        </div>
+        
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+          Training Facility
+        </h3>
+        
+        <p className="text-muted-foreground leading-relaxed">
+          Hands-on practice with real solar installations, professional tools, and expert supervision in our dedicated training center.
+        </p>
+        
+        <div className="pt-4 flex items-center gap-4 text-sm text-muted-foreground border-t border-border">
+          <div className="flex items-center gap-1">
+            <Users className="w-4 h-4" />
+            <span>Max 20 students</span>
           </div>
+          <div className="flex items-center gap-1">
+            <Award className="w-4 h-4" />
+            <span>Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
