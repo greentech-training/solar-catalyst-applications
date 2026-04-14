@@ -333,7 +333,7 @@ const Enroll = () => {
 
                   {/* Company Section - Conditional */}
                   <div className="pt-4 border-t border-border/50">
-                    <Label>Are you related to a company? *</Label>
+                    <Label> Is a company sponsoring your training? *</Label>
                     <RadioGroup
                       required
                       value={formData.isRelatedToCompany}
