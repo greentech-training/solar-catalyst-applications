@@ -137,7 +137,7 @@ const Home = () => {
             </div>
 <div className="scroll-reveal opacity-0 scale-95 transition-all duration-700">
   <div className="grid md:grid-cols-12 gap-0 rounded-sm shadow-xl overflow-hidden border border-border bg-card">
-    {/* Image Side - takes 8/12 columns on desktop */}
+    {/* Image Side */}
     <div className="md:col-span-8 relative aspect-[4/3] md:aspect-auto md:h-[500px] overflow-hidden">
       <img 
         src={trainingImage} 
@@ -147,29 +147,35 @@ const Home = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20 md:to-transparent" />
     </div>
     
-    {/* Content Side - takes 4/12 columns */}
+    {/* Content Side */}
     <div className="md:col-span-4 bg-card p-6 md:p-8 flex flex-col justify-center relative">
-      {/* Decorative element */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-transparent" />
       
       <div className="space-y-4">
-        <div className="flex items-center gap-2 text-muted-foreground text-sm uppercase tracking-wider font-medium">
-          <MapPin className="w-4 h-4" />
-          <span>Berlin Location</span>
+        {/* Location + Schedule — Single Line */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+          <div className="flex items-center gap-1.5 text-muted-foreground uppercase tracking-wider font-medium">
+            <MapPin className="w-4 h-4" />
+            <span>Berlin</span>
+          </div>
+          <span className="hidden sm:inline text-muted-foreground/40">|</span>
+          <span className="text-foreground font-semibold">11–15 May, 2026</span>
+          <span className="text-muted-foreground/60">|</span>
+          <span className="text-foreground font-semibold">09:00 – 15:30</span>
         </div>
-        
+
         <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
           Training Facility
         </h3>
-        
+
         <p className="text-muted-foreground leading-relaxed">
           Hands-on practice with real solar installations, professional tools, and expert supervision in our dedicated training center.
         </p>
-        
+
         <div className="pt-4 flex items-center gap-4 text-sm text-muted-foreground border-t border-border">
           <div className="flex items-center gap-1">
             <Users className="w-4 h-4" />
-            <span>Max 20 students</span>
+            <span>Max 10 students</span>
           </div>
           <div className="flex items-center gap-1">
             <Award className="w-4 h-4" />
