@@ -11,11 +11,8 @@ import { CheckCircle, Loader2 } from "lucide-react";
 import { useContent } from "@/hooks/useContent";
 
 // ✅ CONFIGURATION: Put the MongoDB course IDs you're advertising here
-// Examples: 1 course, 2 courses, or 3 courses - just edit this array
 const COURSE_IDS = [
-  "69de24d07e48dc43dfd861e0", // Change to actual MongoDB ObjectId
-  // "course-id-2", // Uncomment/add more IDs if advertising multiple courses
-  // "course-id-3",
+  "69de24d07e48dc43dfd861e0",
 ];
 
 const API_URL = import.meta.env.VITE_API_URL || "https://decarboniser.greentech.training/api/applications";
@@ -24,7 +21,6 @@ const Enroll = () => {
   const { toast } = useToast();
   const { content } = useContent('enroll');
 
-  // Intersection Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -50,7 +46,6 @@ const Enroll = () => {
     address: "",
     postcode: "",
     city: "",
-    // Company conditional fields
     isRelatedToCompany: "no",
     companyName: "",
     hasGerman: "",
@@ -58,12 +53,22 @@ const Enroll = () => {
     stemExperience: "",
     interviewDays: [] as string[],
     interviewTime: "",
+    canAttendPractical: false,      // ← NEW
     consent: false,
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!formData.canAttendPractical) {
+      toast({
+        title: "Attendance Confirmation Required",
+        description: "Please confirm you can attend the practical training in Berlin.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!formData.consent) {
       toast({
         title: "Consent Required",
@@ -98,8 +103,9 @@ const Enroll = () => {
         motivationLetter: formData.stemExperience,
         interviewAvailability: formData.interviewDays,
         preferredTime: formData.interviewTime,
+        canAttendPractical: formData.canAttendPractical,  // ← NEW
         consentGiven: formData.consent,
-        courseIds: COURSE_IDS, // ✅ Now sends array of course IDs
+        courseIds: COURSE_IDS,
         sourceWebsite: window.location.origin
       };
 
@@ -202,7 +208,6 @@ const Enroll = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
             <div className="relative flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
-              {/* Dotted Line */}
               <div className="absolute top-6 left-0 right-0 h-0.5 border-t-4 border-secondary border-dotted z-0"></div>
 
               {processSteps.map((step, index) => (
@@ -331,7 +336,7 @@ const Enroll = () => {
                     </div>
                   </div>
 
-                  {/* Company Section - Conditional */}
+                  {/* Company Section */}
                   <div className="pt-4 border-t border-border/50">
                     <Label> Is a company sponsoring your training? *</Label>
                     <RadioGroup
@@ -351,7 +356,6 @@ const Enroll = () => {
                       </div>
                     </RadioGroup>
 
-                    {/* Conditional Company Input */}
                     {formData.isRelatedToCompany === "yes" && (
                       <div className="mt-4 animate-in slide-in-from-top-2 duration-300">
                         <Label htmlFor="companyName">Company Name *</Label>
@@ -369,7 +373,7 @@ const Enroll = () => {
                   </div>
                 </div>
 
-                {/* Part 2: Pre-Screening Questionnaire */}
+                {/* Part 2: Pre-Screening */}
                 <div className="space-y-4 pt-6 border-t border-border scroll-reveal opacity-0 translate-y-6 transition-all duration-500" style={{ transitionDelay: '200ms' }}>
                   <h3 className="text-lg font-semibold text-foreground">Pre-Screening Questionnaire</h3>
                   
@@ -472,8 +476,24 @@ const Enroll = () => {
                   </div>
                 </div>
 
-                {/* Part 4: Confirmation */}
+                {/* Part 4: Practical Training Attendance + Confirmation */}
                 <div className="space-y-4 pt-6 border-t border-border scroll-reveal opacity-0 translate-y-6 transition-all duration-500" style={{ transitionDelay: '400ms' }}>
+                  
+                  {/* ← NEW: Practical Training Checkbox */}
+                  <div className="flex items-start space-x-2 bg-secondary/5 p-4 rounded-sm">
+                    <Checkbox
+                      id="canAttendPractical"
+                      checked={formData.canAttendPractical}
+                      onCheckedChange={(checked) => setFormData({...formData, canAttendPractical: checked as boolean})}
+                      disabled={isSubmitting}
+                      className="mt-1"
+                    />
+                    <Label htmlFor="canAttendPractical" className="font-normal text-sm cursor-pointer leading-relaxed">
+                      I live in Berlin and am able to take part in the practical training scheduled from <strong>May 11 to 15</strong> from <strong>9am to 3:30pm</strong>. *
+                    </Label>
+                  </div>
+
+                  {/* Consent Checkbox */}
                   <div className="flex items-start space-x-2 bg-secondary/5 p-4 rounded-sm">
                     <Checkbox
                       id="consent"
