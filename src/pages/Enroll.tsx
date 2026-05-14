@@ -12,7 +12,8 @@ import { useContent } from "@/hooks/useContent";
 
 // ✅ CONFIGURATION: Put the MongoDB course IDs you're advertising here
 const COURSE_IDS = [
-  "69de24d07e48dc43dfd861e0",
+  "6a021a63ac4e30c95fa4b686",
+  "6a032b2069a07fb54db517c2",
 ];
 
 const API_URL = import.meta.env.VITE_API_URL || "https://decarboniser.greentech.training/api/applications";
