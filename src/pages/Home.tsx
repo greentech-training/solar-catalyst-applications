@@ -90,7 +90,7 @@ const Home = () => {
             >
               {content.hero?.subtitle || "Become a certified Solar Technician."}<br /> {content.hero?.subtitle2 || "The pilot program is 100% free."}
             </p>
-            <Link to="/enroll">
+            <Link to="/apply">
               <Button
                 size="lg"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg animate-scale-in rounded-sm"
@@ -353,7 +353,7 @@ const Home = () => {
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
             {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today.Spaces are limited."}
           </p>
-          <Link to="/enroll">
+          <Link to="/apply">
             <Button
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-10 py-6 text-lg transition-all hover:shadow-xl rounded-sm"

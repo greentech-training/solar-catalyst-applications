@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="md:text-right">
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><Link to="/enroll" className="hover:text-primary-foreground transition-colors">Apply Now</Link></li>
+              <li><Link to="/apply" className="hover:text-primary-foreground transition-colors">Apply Now</Link></li>
               <li><Link to="/hiring-partners" className="hover:text-primary-foreground transition-colors">For Hiring Partners</Link></li>
             </ul>
           </div>

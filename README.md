@@ -181,7 +181,7 @@ netlify deploy --prod
 | About | `/about` | Mission, history, and pilot story |
 | Locations | `/locations` | Training facility information |
 | FAQ | `/faq` | Frequently asked questions |
-| Enroll | `/enroll` | Application form |
+| Enroll | `/apply` | Application form |
 | Hiring Partners | `/hiring-partners` | B2B information for employers |
 
 ## 🤝 Contributing

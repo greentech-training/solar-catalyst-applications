@@ -68,7 +68,7 @@ const Navigation = () => {
                 />
               </Link>
             ))}
-            <Link to="/enroll">
+            <Link to="/apply">
               <Button 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-6 py-2 rounded-sm transition-all duration-200"
               >
@@ -121,7 +121,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Link
-              to="/enroll"
+              to="/apply"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 pt-2"
             >

@@ -177,7 +177,7 @@ const FAQ = () => {
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               {content.cta?.description || "Don't let unanswered questions hold you back from starting your solar career."}<br />{content.cta?.description2 || "Apply now and we'll answer all your questions during the interview process."}
             </p>
-            <Link to="/enroll">
+            <Link to="/apply">
               <Button 
                 size="lg" 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg rounded-sm transition-all hover:shadow-lg"

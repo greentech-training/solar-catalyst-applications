@@ -356,7 +356,7 @@ const Program = () => {
               {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today. Bremerhaven Facility launching late 2026."}
             </p>
             
-            <Link to="/enroll">
+            <Link to="/apply">
               <Button 
                 size="lg" 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-10 py-6 rounded-sm transition-all hover:shadow-lg"
