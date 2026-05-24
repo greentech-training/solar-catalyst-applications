@@ -6,7 +6,7 @@
   "faqs": [
     {
       "question": "What does the program cost?",
-      "answer": "The initial pilot program in Bremerhaven is 100% free for all accepted participants with a one-off recruitment and qualification fee charged to hiring partners. The fee is based on your first month's wage and includes all online learning materials, hands-on practical training, and certification costs."
+      "answer": "The initial pilot programs are 100% free for all accepted participants with recruitment fees charged to hiring partners. The fee is based on a hired technician’s first month's wage and covers all online learning materials, hands-on practical training, and certification costs."
     },
     {
       "question": "Who can apply?",
@@ -18,7 +18,7 @@
     },
     {
       "question": "Is the training online or in-person?",
-      "answer": "It's both. The program uses a 'blended' model. You will complete theory modules online at your own pace and attend mandatory in-person practical training at our Bremerhaven facility (WERK), with a Berlin facility currently in planning."
+      "answer": "It's both. The program uses a 'blended' model. You will complete theory modules online at your own pace and attend mandatory in-person practical training at our partnering community facilities."
     },
     {
       "question": "What does 'B1 German' mean?",
@@ -34,7 +34,7 @@
     },
     {
       "question": "Is the certification recognized across Europe?",
-      "answer": "InnoEnergy has developed a harmonised training framework for Solar Technicians, taking into account the requirements of different Member States. They are working on establishing a qualification that will be recognized by employers across the continent."
+      "answer": "InnoEnergySkills institute, as part of the newly launched European Solar Academy, has developed a harmonised training framework for Solar Technicians, taking into account the requirements of different Member States. They are in the process of establishing a qualification that will be recognized by employers across the continent."
     },
     {
       "question": "Do I need previous experience in solar energy or electrical work?",
@@ -42,7 +42,7 @@
     },
     {
       "question": "What equipment do I need?",
-      "answer": "You need access to a laptop with a reliable internet connection for the online learning modules. All practical training equipment is provided at our Bremerhaven facility (WERK)."
+      "answer": "You need access to a laptop with a reliable internet connection for the online learning modules. All practical training tools and equipment including PSA gear is provided at our partnering community facilities."
     },
     {
       "question": "What if I can't attend or I'm not accepted into the free pilot?",
@@ -50,7 +50,7 @@
     },
     {
       "question": "How do I apply?",
-      "answer": "Simply click the 'Apply Now' button and complete the application form. A Solar Catalyst team member will review your submission and, if provisionally accepted for interview, will contact you within 5–7 business days to confirm your spoken German level and other details."
+      "answer": "Simply click the 'Apply Now' button and complete the application form. A Solar Catalyst team member will review your submission and, if provisionally accepted for interview, will contact you by October 30, 2026 with further details."
     },
     {
       "question": "Can I install a PV System independently?",
@@ -58,11 +58,11 @@
     },
     {
       "question": "What about insurance?",
-      "answer": "Participants taking part in the physical installation do so under accident insurance offered by greentech.training. In 2026, greentech.training will be working with insurers to develop policies especially for Solar Technicians as a newly accredited professional class in the field."
+      "answer": "Participants taking part in the physical installation do so under accident insurance offered by greentech.training’s partnering community facilities."
     },
     {
       "question": "How is the training performed?",
-      "answer": "Those who are required to undergo preliminary technical German language training must pass a final oral assessment to advance to the theoretical training. Up to 15 participants can attend these language sessions, with 4 × 90-minute live sessions. Only 10 participants will be selected for advancement based on the assessors' overall evaluation. After completing the theory component, participants must pass a final assessment to advance to the practical training. A certificate is issued only after successful completion of the practical stage by InnoEnergy's Skills Institute as part of the European Solar Academy."
+      "answer": " A maximum of 10 participants will be selected for the course based on an assessment of their German level and experience. The theory component is completed online, and participants must pass a final assessment to advance to the 1-2 week practical training stage at a partnering community facility. A certificate is issued only after successful completion of the practical stage by InnoEnergy's Skills Institute as part of the European Solar Academy."
     },
     {
       "question": "Is there additional German training to help me prepare for the course?",
@@ -78,7 +78,7 @@
     },
     {
       "question": "Is the program linked to the Jobcenter?",
-      "answer": "No. While the pilot is free for ten people, future sessions will either be paid by participants themselves or sponsored by hiring companies to match market demand for solar talent."
+      "answer": "No. The program is currently designed to be a 100% market-driven concept, whereby hiring companies sponsor training so that market demand matches supply for solar talent."
     }
   ],
   "cta": {

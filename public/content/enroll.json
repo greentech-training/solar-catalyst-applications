@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Apply Now",
-    "description": "Selection for the pilot programs is based on a number of criteria: It is open to anyone in Germany aged over 18 with at least a CEF-B1 German level. Selection will be based on previous STEM performance, location, demonstrated civic engagement, and expressed desire to enter a climate career. Online training for selected participated is slated to begin in the summer of 2026, with practical training at the partnering facilities commencing after successful completion of the online component."
+    "description": "Selection for the Solar Catalyst programs is based on a number of criteria: It is open to anyone in Germany aged over 18 with at least a CEF-B1 German level. Selection will be based on previous STEM performance, location, demonstrated civic engagement, and expressed desire to enter a climate career. The next training is slated for late 2026 in Berlin, with applications open year round. Only those pre-selected for interview will be notified by October 30, 2026."
   },
   "processSteps": [
     "Submit Application",
@@ -18,7 +18,7 @@
   },
   "successMessage": {
     "title": "Thank You for Applying!",
-    "description": "We have received your application. Our team will review it and contact you via email within 5-7 business days to schedule your online interview.",
+    "description": "We have received your application. Our team will review it and contact you via email by October 30, 2026, if you are pre-selected for the next intake slated for late 2026.",
     "note": "Please check your email regularly, including your spam folder, for our response."
   }
 }

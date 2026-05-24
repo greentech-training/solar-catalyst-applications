@@ -6,7 +6,7 @@
 //     hero: {
 //       title: "Start Your Career in the Energy Transition",
 //       subtitle: "Become a certified Solar Technician.",
-//       subtitle2: "The pilot program is 100% free.",
+//       subtitle2: "Next program slated for Q4 2026.",
 //       buttonText: "Apply Now"
 //     },
 //     opportunity: {
@@ -36,7 +36,7 @@
 //     partnersTitle: "Backed by Global Leaders in Energy & Innovation",
 //     partnersSubtitle: "This program is made possible through a partnership with leading community and international organizations.",
 //     finalCTA: {
-//       title: "Don't Miss This. Your Solar Career Starts Here.",
+//       title: "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage.",
 //       subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
 //       buttonText: "Apply now"
 //     }
@@ -162,7 +162,7 @@ const defaultContent: Record<string, any> = {
     hero: {
       title: "Start Your Career in the Energy Transition",
       subtitle: "Become a certified Solar Technician.",
-      subtitle2: "The pilot program is 100% free.",
+      subtitle2: "Next program slated for Q4 2026.",
       buttonText: "Apply Now"
     },
     opportunity: {
@@ -192,7 +192,7 @@ const defaultContent: Record<string, any> = {
     partnersTitle: "Backed by Global Leaders in Energy & Innovation",
     partnersSubtitle: "This program is made possible through a partnership with leading community and international organizations.",
     finalCTA: {
-      title: "Don't Miss This. Your Solar Career Starts Here.",
+      title: "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage.",
       subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
       buttonText: "Apply now"
     }

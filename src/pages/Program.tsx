@@ -353,7 +353,7 @@ const Program = () => {
               {content.finalCTA?.title || "Ready to Begin Your Solar Career?"}
             </h2>
             <p className="text-sm sm:text-md md:text-xl text-muted-foreground mb-10">
-              {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today. Bremerhaven Facility launching late 2026."}
+              {content.finalCTA?.subtitle || "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage."}
             </p>
             
             <Link to="/apply">

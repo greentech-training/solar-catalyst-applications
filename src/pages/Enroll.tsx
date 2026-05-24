@@ -54,7 +54,7 @@ const Enroll = () => {
     stemExperience: "",
     interviewDays: [] as string[],
     interviewTime: "",
-    canAttendPractical: false,      // ← NEW
+    canAttendPractical: false,
     consent: false,
   });
 
@@ -104,7 +104,7 @@ const Enroll = () => {
         motivationLetter: formData.stemExperience,
         interviewAvailability: formData.interviewDays,
         preferredTime: formData.interviewTime,
-        canAttendPractical: formData.canAttendPractical,  // ← NEW
+        canAttendPractical: formData.canAttendPractical,
         consentGiven: formData.consent,
         courseIds: COURSE_IDS,
         sourceWebsite: window.location.origin
@@ -125,11 +125,7 @@ const Enroll = () => {
       }
       
       setSubmitted(true);
-      
-      toast({
-        title: "Application Submitted!",
-        description: `Successfully applied for ${data.data.created} course(s). We'll contact you within 5-7 business days.`,
-      });
+      // ✅ Removed the success toast — only the main page success screen remains
       
     } catch (error: any) {
       console.error("Submission error:", error);
@@ -170,16 +166,10 @@ const Enroll = () => {
                 <CheckCircle className="w-12 h-12 text-secondary" strokeWidth={2} />
               </div>
               <h1 className="text-4xl font-bold text-foreground mb-4">
-                {content.successMessage?.title || "Thank You for Applying!"}
+                Thank You for Applying!
               </h1>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                {content.successMessage?.description || `We have received your application for ${COURSE_IDS.length} course(s).`}
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                Our team will review your application(s) and contact you via email within 5-7 business days.
-              </p>
-              <p className="text-muted-foreground text-sm">
-                {content.successMessage?.note || "Please check your email regularly, including your spam folder."}
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We have received your application. Our team will review it and contact you via email by October 30, 2026, if you are pre-selected for the next intake slated for late 2026.
               </p>
             </CardContent>
           </Card>
@@ -225,7 +215,7 @@ const Enroll = () => {
                   </p>
                   {index === 4 && (
                     <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-                      Q2 2026
+                      Q4 2026
                     </p>
                   )}
                 </div>
@@ -243,11 +233,6 @@ const Enroll = () => {
               <CardTitle className="text-2xl text-foreground">
                 {content.form?.title || "Application Form"}
               </CardTitle>
-              {COURSE_IDS.length > 1 && (
-                <p className="text-sm text-muted-foreground mt-2">
-                  This application is for {COURSE_IDS.length} courses/programs
-                </p>
-              )}
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -480,7 +465,7 @@ const Enroll = () => {
                 {/* Part 4: Practical Training Attendance + Confirmation */}
                 <div className="space-y-4 pt-6 border-t border-border scroll-reveal opacity-0 translate-y-6 transition-all duration-500" style={{ transitionDelay: '400ms' }}>
                   
-                  {/* ← NEW: Practical Training Checkbox */}
+                  {/* Practical Training Checkbox */}
                   <div className="flex items-start space-x-2 bg-secondary/5 p-4 rounded-sm">
                     <Checkbox
                       id="canAttendPractical"
@@ -490,7 +475,7 @@ const Enroll = () => {
                       className="mt-1"
                     />
                     <Label htmlFor="canAttendPractical" className="font-normal text-sm cursor-pointer leading-relaxed">
-                      I live in Berlin and am able to take part in the practical training scheduled from <strong>May 11 to 15</strong> from <strong>9am to 3:30pm</strong>. *
+                      I understand that only pre-selected applicants will be contacted for the next Berlin training session slated for late 2026. *
                     </Label>
                   </div>
 
@@ -523,7 +508,7 @@ const Enroll = () => {
                     </>
                   ) : (
                     COURSE_IDS.length > 1 
-                      ? `Apply for ${COURSE_IDS.length} Courses` 
+                      ? `Apply` 
                       : "Submit My Application"
                   )}
                 </Button>
