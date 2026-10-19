@@ -88,7 +88,7 @@ const Home = () => {
               className="text-xl text-primary-foreground/95 mb-8 leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              {content.hero?.subtitle || "Become a certified Solar Technician."}<br /> {content.hero?.subtitle2 || "Next program slated for Q4 2026."}
+              {content.hero?.subtitle || "Become a certified Solar Technician"}<br /> {content.hero?.subtitle2 || "as part of the European Solar Academy"}
             </p>
             <Link to="/apply">
               <Button
@@ -159,9 +159,9 @@ const Home = () => {
             <span>Berlin</span>
           </div>
           <span className="hidden sm:inline text-muted-foreground/40">|</span>
-          <span className="text-foreground font-semibold"> Q4, 2026 </span>
+          <span className="text-foreground font-semibold"> Three week program </span>
           <span className="text-muted-foreground/60">|</span>
-          <span className="text-foreground font-semibold"> Date TBA </span>
+          <span className="text-foreground font-semibold"> Date: April 2027 </span>
         </div>
 
         <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
@@ -348,10 +348,10 @@ const Home = () => {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 lg:px-8 text-center scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            {content.finalCTA?.title || "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage."}
+            {content.finalCTA?.title || "The next Berlin program is slated to run in April 2027. Register your interest now to be considered for selection."}
           </h2>
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
-            {content.finalCTA?.subtitle || "Apply for the free Berlin pilot program today.Spaces are limited."}
+            {content.finalCTA?.subtitle || "Apply for the free 4 week Berlin and Bremerhaven pilot programs today. Expected start: April 2027"}
           </p>
           <Link to="/apply">
             <Button

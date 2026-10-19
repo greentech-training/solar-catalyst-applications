@@ -475,7 +475,7 @@ const Enroll = () => {
                       className="mt-1"
                     />
                     <Label htmlFor="canAttendPractical" className="font-normal text-sm cursor-pointer leading-relaxed">
-                      I understand that only pre-selected applicants will be contacted for the next Berlin training session slated for late 2026. *
+                      I understand that only pre-selected applicants will be contacted for an interview. *
                     </Label>
                   </div>
 

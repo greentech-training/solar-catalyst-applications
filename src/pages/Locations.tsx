@@ -97,7 +97,7 @@ const Locations = () => {
                 {content.facility?.title || "KulturMarktHalle Berlin"}
               </h2>
               <p className="text-sm sm:text-md md:text-lg text-muted-foreground">
-                {content.facility?.subtitle || "Hosted by KulturMarktHalle in Berlin's Neukölln District."}
+                {content.facility?.subtitle || "The Solar Catalyst program is hosted in partnership with Kulturmarkthalle in Berlin with WERK Bremerhaven (slated for April 2027). These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."}
               </p>
             </div>
 

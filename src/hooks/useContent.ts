@@ -6,7 +6,7 @@
 //     hero: {
 //       title: "Start Your Career in the Energy Transition",
 //       subtitle: "Become a certified Solar Technician.",
-//       subtitle2: "Next program slated for Q4 2026.",
+//       subtitle2: "as part of the European Solar Academy",
 //       buttonText: "Apply Now"
 //     },
 //     opportunity: {
@@ -37,7 +37,7 @@
 //     partnersSubtitle: "This program is made possible through a partnership with leading community and international organizations.",
 //     finalCTA: {
 //       title: "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage.",
-//       subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
+//       subtitle: "Apply for the free Bremerhaven pilot program today. Expected start: April 2027",
 //       buttonText: "Apply now"
 //     }
 //   },
@@ -53,7 +53,7 @@
 //     },
 //     finalCTA: {
 //       title: "Ready to Begin Your Solar Career?",
-//       subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
+//       subtitle: "Apply for the free Bremerhaven pilot program today. Expected start: April 2027",
 //       buttonText: "Apply Now →"
 //     }
 //   },
@@ -161,8 +161,8 @@ const defaultContent: Record<string, any> = {
   home: {
     hero: {
       title: "Start Your Career in the Energy Transition",
-      subtitle: "Become a certified Solar Technician.",
-      subtitle2: "Next program slated for Q4 2026.",
+      subtitle: "Become a certified Solar Technician",
+      subtitle2: "as part of the European Solar Academy",
       buttonText: "Apply Now"
     },
     opportunity: {
@@ -192,8 +192,8 @@ const defaultContent: Record<string, any> = {
     partnersTitle: "Backed by Global Leaders in Energy & Innovation",
     partnersSubtitle: "This program is made possible through a partnership with leading community and international organizations.",
     finalCTA: {
-      title: "The next Berlin program is slated to run in late 2026. Pre-selected candidates will be notified by October 30 if their application has progressed to the interview stage.",
-      subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
+      title: "The next Berlin program is slated to run in April 2027. Register your interest now to be considered for selection.",
+      subtitle: "Apply for the free Bremerhaven pilot program today. Expected start: April 2027",
       buttonText: "Apply now"
     }
   },
@@ -209,7 +209,7 @@ const defaultContent: Record<string, any> = {
     },
     finalCTA: {
       title: "Ready to Begin Your Solar Career?",
-      subtitle: "Apply for the free Bremerhaven pilot program today. Spaces are limited.",
+      subtitle: "Apply for the free Bremerhaven pilot program today. Expected start: April 2027",
       buttonText: "Apply Now →"
     }
   },
