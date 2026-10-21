@@ -348,7 +348,7 @@ const Home = () => {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 lg:px-8 text-center scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            {content.finalCTA?.title || "The next Berlin program is slated to run in April 2027. Register your interest now to be considered for selection."}
+            {content.finalCTA?.title || ""}
           </h2>
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
             {content.finalCTA?.subtitle || "Apply for the free 4 week Berlin and Bremerhaven pilot programs today. Expected start: April 2027"}

@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 max-w-md">
-              Building an international harmonised approach to<br/> training green skills.
+              Building an international harmonised approach to training green skills.
             </p>
           </div>
 

@@ -81,7 +81,7 @@ const Locations = () => {
               {content.hero?.title || "Training Facilities"}
             </h1>
             <p className="text-sm sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              {content.hero?.description || "The first German program is hosted in partnership with Kulturmarkthalle in Berlin with WERK Bremerhaven slated for late 2026. These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."}
+              {content.hero?.description || "The first German program is hosted in partnership with Kulturmarkthalle in Berlin with WERK Bremerhaven slated for April 2027. These community-focused facilities offer a central and accessible location, ideal for hands-on installation training."}
             </p>
           </div>
         </div>
