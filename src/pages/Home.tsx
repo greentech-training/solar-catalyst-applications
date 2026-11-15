@@ -353,7 +353,7 @@ const Home = () => {
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
             {content.finalCTA?.subtitle || "Apply for the free 4 week Berlin and Bremerhaven pilot programs today. Expected start: April 2027"}
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
   <Link to="/apply">
     <Button
       size="lg"
