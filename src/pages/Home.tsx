@@ -353,14 +353,26 @@ const Home = () => {
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
             {content.finalCTA?.subtitle || "Apply for the free 4 week Berlin and Bremerhaven pilot programs today. Expected start: April 2027"}
           </p>
-          <Link to="/apply">
-            <Button
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-10 py-6 text-lg transition-all hover:shadow-xl rounded-sm"
-            >
-              {content.finalCTA?.buttonText || "Apply now"}
-            </Button>
-          </Link>
+          <div className="flex gap-4">
+  <Link to="/apply">
+    <Button
+      size="lg"
+      className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg animate-scale-in rounded-sm"
+      style={{ animationDelay: "0.4s" }}
+    >
+      {content.hero?.buttonText || "Apply Now"}
+    </Button>
+  </Link>
+  <a href="https://glms.solar-catalyst.eu/login">
+    <Button
+      size="lg"
+      variant="outline"
+      className="border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg rounded-sm"
+    >
+      {content.hero?.signInText || "Sign In"}
+    </Button>
+  </a>
+</div>
         </div>
       </section>
 
