@@ -20,7 +20,8 @@ const Home = () => {
   
   // CMS Integration - loads content but falls back to hardcoded values
   const { content } = useContent('home');
-
+  const actionButtonSize =
+  "h-14 w-full sm:w-44 px-8 text-lg font-semibold rounded-sm transition-all hover:shadow-lg";
   // Intersection Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -90,15 +91,31 @@ const Home = () => {
             >
               {content.hero?.subtitle || "Become a certified Solar Technician"}<br /> {content.hero?.subtitle2 || "as part of the European Solar Academy"}
             </p>
-            <Link to="/apply">
-              <Button
-                size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg animate-scale-in rounded-sm"
-                style={{ animationDelay: "0.4s" }}
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+              <Link to="/apply" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className={`${actionButtonSize} bg-secondary hover:bg-secondary/90 text-secondary-foreground animate-scale-in`}
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  {content.hero?.buttonText || "Apply Now"}
+                </Button>
+              </Link>
+
+              <a
+                href="https://glms.solar-catalyst.eu/login"
+                className="w-full sm:w-auto"
               >
-                {content.hero?.buttonText || "Apply Now"}
-              </Button>
-            </Link>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className={`${actionButtonSize} border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary animate-scale-in`}
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  {content.hero?.signInText || "Sign In"}
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -353,26 +370,30 @@ const Home = () => {
           <p className="text-xl mb-10 opacity-95 max-w-2xl mx-auto whitespace-pre-line">
             {content.finalCTA?.subtitle || "Apply for the free 4 week Berlin and Bremerhaven pilot programs today. Expected start: April 2027"}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-  <Link to="/apply">
-    <Button
-      size="lg"
-      className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg animate-scale-in rounded-sm"
-      style={{ animationDelay: "0.4s" }}
-    >
-      {content.hero?.buttonText || "Apply Now"}
-    </Button>
-  </Link>
-  <a href="https://glms.solar-catalyst.eu/login">
-    <Button
-      size="lg"
-      variant="outline"
-      className="border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:shadow-lg rounded-sm"
-    >
-      {content.hero?.signInText || "Sign In"}
-    </Button>
-  </a>
-</div>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+                <Link to="/apply" className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    className={`${actionButtonSize} bg-secondary hover:bg-secondary/90 text-secondary-foreground animate-scale-in`}
+                    style={{ animationDelay: "0.4s" }}
+                  >
+                    {content.hero?.buttonText || "Apply Now"}
+                  </Button>
+                </Link>
+
+                <a
+                  href="https://glms.solar-catalyst.eu/login"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className={`${actionButtonSize} border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary`}
+                  >
+                    {content.hero?.signInText || "Sign In"}
+                  </Button>
+                </a>
+            </div>
         </div>
       </section>
 
